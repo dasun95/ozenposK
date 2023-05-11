@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="carousel">
+        <app-carousel></app-carousel>
+    </div>
+
+    <div class="vertical-line"></div>
+
+    <div class="logins">
+
+        <h3>Sign up for Ozen Pos Platform</h3>
+        <div class="single-input">
+            <label>Root user email address</label>
+            <p>Using this email you can access any product from the ozen Pos platform</p>
+            <input type="text">
+        </div>
+        <div class="double-input">
+            <div class="single-input">
+                <label>First Name</label>
+                <input type="password">
+            </div>
+            <div class="single-input">
+                <label>Last Name</label>
+                <input type="password">
+            </div>
+        </div>
+
+        <button class="buttonOrange"> <a href="#"></a>Verify Your Email Address</button>
+
+        <div class="verticle-line">
+            <hr class="line">
+            <span class="text">OR</span>
+            <hr class="line">
+        </div>
+
+        <button (click)="goToLoginPage()" class="buttonTransparent"> Already have an account</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,240 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #1f3044;
+  --secondary-color: #34495e;
+  --light-gray: #f5f5f5;
+  --dark-gray: #e0e5eb;
+  --blue-color: #0d99ff;
+  --orange-color: #ff6600;
+  --green-color: #007185;
+  --red-color: #c0392b;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// @mixin media-xl {
+//   @media screen and (max-width: 1600px) {
+//     @content;
+//   }
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.security-header {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+
+  h1 {
+    font-size: 2rem;
+    // color: var(--light-gray);
+    color: var(--light-gray);
+    font-weight: 200;
+    bottom: 0;
+  }
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  color: var(--light-gray);
+  background-color: var(--primary-color);
+
+  .copyrights {
+    display: flex;
+
+    h3 {
+      font-weight: 100;
+    }
+  }
+
+  .essential-links {
+    display: flex;
+    margin-right: 2rem;
+    a {
+      color: var(--light-gray);
+      text-decoration: none;
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  }
+
+  h3 {
+    padding-left: 0.25rem;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  h3 {
+    margin: 5vh 5vw 0 5vw;
+    padding-bottom: 0.5vh;
+  }
+  .vertical-line {
+    width: 1px;
+    height: 50vh;
+    background-color: var(--dark-gray);
+    margin-right: 10px; /* Adjust as needed */
+  }
+
+  .logins {
+    width: 100%; //dont change this
+    display: flex;
+    flex-direction: column;
+
+    p {
+      color: #34495e;
+    }
+
+    .double-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .single-input {
+        flex: 1;
+      }
+    }
+
+    .single-input {
+      display: flex;
+      flex-direction: column;
+      margin: 2vh 5vw 0 5vw;
+
+      label {
+        padding: 0.5rem 0 0.5rem 0;
+        font-size: 1.25rem;
+      }
+
+      input {
+        height: 4vh;
+      }
+    }
+    .forget-password {
+      display: flex;
+      justify-content: end;
+      margin: 0.25vh 5vw 0 5vw;
+    }
+
+    .buttonBlue {
+      height: 4vh;
+      margin: 3vh 5vw 3vh 5vw;
+      font-size: larger;
+      background-color: var(--blue-color);
+      border: none;
+      border-radius: 0.2rem;
+      color: var(--light-gray);
+      cursor: pointer;
+      &:hover {
+        background-color: var(--primary-color);
+      }
+    }
+
+    .buttonTransparent {
+      background-color: transparent;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+      @extend .buttonBlue;
+      &:hover {
+        color: var(--light-gray);
+      }
+    }
+    .buttonOrange {
+      background-color: var(--orange-color);
+      @extend .buttonBlue;
+      &:hover {
+        color: var(--light-gray);
+      }
+    }
+
+    .verticle-line {
+      margin: 0 5vw 0 5vw;
+      display: flex;
+      align-items: center;
+      .line {
+        flex-grow: 1;
+        height: 1px;
+        margin: 0 10px;
+        background-color: var(--dark-gray);
+      }
+
+      .text {
+        color: var(--dark-gray);
+      }
+    }
+  }
+
+  .carousel {
+    width: 50%;
+    max-width: 500px;
+    margin: 10vh;
+    // height: 600px;
+    //   // background-color: var(--green-color);
+  }
+}
+
+// @include media-xl {
+//   .security-header {
+//   }
+// }
+
+@include media-md {
+  // .double-input {
+  //   .single-input {
+  //     width: 100%;
+  //   }
+  // }
+  .vertical-line {
+    display: none;
+  }
+
+  .main-footer {
+    position: static;
+  }
+
+  .security-header {
+    text-align: center;
+  }
+  .main-footer {
+    flex-direction: column;
+  }
+  .essential-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  a {
+    font-size: 20px;
+    padding-top: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    .logins {
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .carousel {
+    display: none;
+  }
+}
