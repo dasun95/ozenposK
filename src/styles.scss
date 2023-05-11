@@ -31,13 +31,11 @@
 }
 
 .security-header {
-  width: 100%;
   background-color: var(--primary-color);
   padding: 1rem;
 
   h1 {
     font-size: 2rem;
-    // color: var(--light-gray);
     color: var(--light-gray);
     font-weight: 200;
     bottom: 0;
@@ -80,7 +78,10 @@
 
 .page {
   // position: absolute;
-  bottom: 0px;
+  left: 0p;
+  right: 0p;
+  bottom: 0;
+  width: 100%;
   background-color: var(--green-color);
   margin: 0;
   padding: 0;
@@ -98,13 +99,12 @@
 }
 .boxDiv2 {
   display: flex;
-  height: fit-content;
-
-  max-height: fit-content;
+  height: 8vh;
   width: 20vw;
   padding: 2vh;
   background-color: var(--dark-gray);
   border-radius: 10px;
+  box-shadow: 5px 5px 5px var(--primary-color);
 }
 
 .invisibleDiv {
@@ -253,7 +253,6 @@
 
   .invisibleDiv {
     display: none;
-    position: fixed;
   }
   .vertical-line {
     display: none;
